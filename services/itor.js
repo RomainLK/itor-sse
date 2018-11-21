@@ -27,6 +27,9 @@ module.exports = function itor(int){
     let { time, rest} =  decompose(int, value)
     const substractMode = rest >= (value - inferiorValue)
     if(substractMode){
+      if(time > 1){
+        result += repeat(symbol, time)
+      }
       result += inferiorSymbol + symbol
       rest = rest - (value-inferiorValue)
     }
@@ -36,6 +39,7 @@ module.exports = function itor(int){
     return rest
   }
   
+  debugger
   const hundredR = symbol(int, 'C', 'X', 100, 10)
   const fiftyR = symbol(hundredR, 'L', 'X', 50, 10)
   const tenR = symbol(fiftyR, 'X', 'I', 10, 1)
