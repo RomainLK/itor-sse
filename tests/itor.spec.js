@@ -51,6 +51,10 @@ describe('itor', () => {
     expect(itor(14)).toEqual('XIV')
   })
 
+  test('It converts 15', () => {
+    expect(itor(15)).toEqual('XV')
+  })
+
   test('It converts 95', () => {
     expect(itor(95)).toEqual('XCV')
   })
@@ -66,7 +70,16 @@ describe('itor', () => {
   test('It converts 88', () => {
     expect(itor(88)).toEqual('LXXXVIII')
   })
+
+  test('It converts 89', () => {
+    expect(itor(89)).toEqual('LXXXIX')
+  })
+
   test('It converts 49', () => {
     expect(itor(49)).toEqual('XLIX')
+  })
+
+  test('It converts 51', () => {
+    expect(itor(51)).toEqual('LI')
   })
 })
