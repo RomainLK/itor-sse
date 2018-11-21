@@ -30,12 +30,12 @@ module.exports = function itor(int){
       result += inferiorSymbol + symbol
       rest = rest - (value-inferiorValue)
     }
-    if(time < 4){
+    else {
       result += repeat(symbol, time)
     }
     return rest
   }
-  debugger
+  
   const hundredR = symbol(int, 'C', 'X', 100, 10)
   const fiftyR = symbol(hundredR, 'L', 'X', 50, 10)
   const tenR = symbol(fiftyR, 'X', 'I', 10, 1)

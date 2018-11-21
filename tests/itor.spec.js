@@ -66,4 +66,7 @@ describe('itor', () => {
   test('It converts 88', () => {
     expect(itor(88)).toEqual('LXXXVIII')
   })
+  test('It converts 49', () => {
+    expect(itor(49)).toEqual('XLIX')
+  })
 })

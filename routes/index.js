@@ -1,9 +1,13 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 
+const itor = require('../services/itor')
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+router.get('/itor', function(req, res, next) {
+  res.set({
+    'Content-Type': 'text/plain'
+  })
+  res.send(itor(parseInt(req.query.value)))
 });
 
 module.exports = router;
